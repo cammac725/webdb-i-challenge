@@ -75,6 +75,7 @@ UPDATE Customers SET PostalCode = "11122"
 
 - delete all customers that have no orders. Should delete 18 records.
 
+DELETE FROM Customers WHERE CustomerId NOT IN (select CustomerId FROM Orders)
 
 - list orders grouped by customer showing the number of orders per customer. _Rattlesnake Canyon Grocery_ should have 7 orders.
 
